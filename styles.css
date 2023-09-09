@@ -10,7 +10,7 @@ html{
     height:100%;
     color:var(--text-color);
     background:var(--base-color);
-    font-size:1.2em;
+    font-family:"Raleway", sans-serif ;
 }
 *{
     padding:0;
@@ -52,9 +52,16 @@ a{
   }
  
   .nav-link:hover{
-    /*Increases font size when hovered over*/
-    font-size:1.2rem;
-  }
+        /* text-shadow:
+        1px 1px 0 var(--secondary-color);
+         
+        -webkit-transition: all .5s;
+        -moz-transition: all .5s;
+        -o-transition: all .5s;
+        transition: all .5s;*/
+        font-weight:600;
+    }
+
   
   @media(min-width:701px){
     .column1{
@@ -82,12 +89,13 @@ a{
         background:var(--base-color);
         overflow:scroll;
     }
+     /*Controls amount of space logo of college can display in for schedule*/
     .compress-image{
         width:5vw;
     }
-    
+    /*Controls amount of space name of college can display in for schedule*/
     .compress-name{
-        width:20vw;
+        width:40vw;
     }
   }
   @media(max-width:700px){
@@ -150,38 +158,40 @@ a{
       .nav-item{
         margin:5vh;
       }
-      /* .nav-menu.active{
-        left:0;
-      } */
   }
 /*End of styling for header*/
 /*styling for photo carousel*/
 .slider{
     width:90%;
-    margin: auto;
-
-    border: 3px solid var(--primary-color);
+    margin: auto; 
+    /*Blends in with background so that desktop view doesn't scrunch box shadow*/
+    border:3px solid var(--base-color);
 
 }
 .wrapper{
     width:100%;
+    box-shadow: 0 0 0 3px var(--primary-color);
+    border-radius:3px;
+    
 }
 
 
 .slider img{
     width:100%;
+    border-radius:3px;
+
 }
-/* .fade{
-    animation:fade 1.5s;
+.fade{
+    animation:fade 3s;
 }
 @keyframes fade {
     from {
-        opacity: .4;
+        opacity: 0.4;
     } 
     to {
         opacity: 1;
     }
-} */
+}
 /*end of styling for photo carousel*/
 /*Styling for main elements*/
 .section-header{
@@ -201,7 +211,7 @@ table{
     width:90%;
     margin:0 5%;
     /*Gets rid of all the borders for tr*/
-    border-collapse:collapse
+    border-collapse:collapse;
 }
 /*Have some schedule settings in bigger screen view*/
 .row{
@@ -209,6 +219,17 @@ table{
 }
 .row:nth-child(odd){
     background-color:var(--primary-color);
+   
+}
+/*Rounds corner of logo area for table row*/
+td:nth-child(1){
+    border-top-left-radius:3px;
+    border-bottom-left-radius:3px;
+}
+/*Rounds corner of date (TBD) area for table row*/
+td:nth-child(3){
+    border-top-right-radius:3px;
+    border-bottom-right-radius:3px;
 }
 .vs{
     background-color:var(--secondary-color);
@@ -236,8 +257,10 @@ input, textarea{
     width:90%;
     min-height:2em;
     background-color:var(--primary-color);
-    border:3px solid var(--primary-color);
+    box-shadow: 0 0 0 3px var(--primary-color);
+    border:none;
     color:var(--text-color);
+    border-radius:3px;
   
 
 }
