@@ -21,9 +21,8 @@ let bannerIndex = 0;
 showBanner();
 
 function showBanner() {
-  let i;
   let banner = document.getElementsByClassName("banner");
-  for (i = 0; i < banner.length; i++) {
+  for (let i = 0; i < banner.length; i++) {
     banner[i].style.display = "none";  
   }
  bannerIndex++;
@@ -33,14 +32,13 @@ function showBanner() {
   banner[bannerIndex-1].style.display = "block";  
   setTimeout(showBanner, 10000); // Change image every 5 seconds
 }
-//image carosel
+//image carousel
 let imageIndex = 0;
 showImage();
-
+const image1 = document.querySelector(".image1");
 function showImage() {
-  let i;
   let image = document.getElementsByClassName("image");
-  for (i = 0; i < image.length; i++) {
+  for (let i = 0; i < image.length; i++) {
     image[i].style.display = "none";  
   }
  imageIndex++;
