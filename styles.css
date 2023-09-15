@@ -272,6 +272,9 @@ input[type="submit"]{
     background-color:var(--secondary-color);
     color:var(--primary-color);
 }
+::placeholder{
+    color:var(--text-color)
+}
 /*End of styling for contact us*/
 /*Styling for announcements*/
 
