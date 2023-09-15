@@ -1,9 +1,13 @@
 :root{
     --navbar-height:0;
-    --base-color:#D1D8DF;
+    /* --base-color:#D1D8DF;
     --primary-color: #E8E8E8;
     --secondary-color:#A4866B;
-    --text-color:grey;
+    --text-color:grey; */
+    --base-color:#DCE4E2;
+    --primary-color: #9EA9B0;
+    --secondary-color:#002169;
+    --text-color:#1A2D38;
 }
 html{
     width:100%;
