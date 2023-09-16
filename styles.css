@@ -4,10 +4,11 @@
     --primary-color: #E8E8E8;
     --secondary-color:#A4866B;
     --text-color:grey; */
-    --base-color:#DCE4E2;
-    --primary-color: #9EA9B0;
+    --base-color:white;
+    --primary-color: #DCE4E2;
     --secondary-color:#002169;
-    --text-color:#1A2D38;
+    --text-color:#365185;
+    /*#5d8EE5*/
 }
 html{
     width:100%;
