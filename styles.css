@@ -1,14 +1,10 @@
 :root{
     --navbar-height:0;
-    /* --base-color:#D1D8DF;
-    --primary-color: #E8E8E8;
-    --secondary-color:#A4866B;
-    --text-color:grey; */
+    --tertiary-color:#A4866B;
     --base-color:white;
     --primary-color: #DCE4E2;
     --secondary-color:#002169;
     --text-color:#365185;
-    /*#5d8EE5*/
 }
 html{
     width:100%;
@@ -27,6 +23,9 @@ html{
 .sub-text{
     margin: auto 5%;
 }
+.special-banner{
+    color:var(--tertiary-color);
+}
 .banner{
     text-align:center;
     background-color:var(--text-color) !important;
@@ -38,20 +37,12 @@ html{
 }
 
 /*Styling for header*/
-.colby-logo{
-    width:35px;
-    height:35px;
-    object-fit:fill;
-    z-index:1;
-    
-}
 li{
     /*Gets rid of bullet points for unordered list elements*/
     list-style:none;
   }
   
 a{
-    display:inline;
     color:var(--secondary-color);
     text-decoration:none;
   }
@@ -69,30 +60,32 @@ a{
 
   
   @media(min-width:701px){
-    .column1{
-        width:20%;
-        height:100vh;
-        background:var(--primary-color);
-        float:left;
-        overflow:hidden;
-        text-align:left;
-        font-size:1.3em;
-        display:flex;
-    }
     .colby-logo{
-        margin:3vh 3vh 0 3vh;
         height:60px;
         width:60px;
     }
-    .nav-item{
-        padding:3vh;
+    a{
+        color:var(--primary-color) ;
     }
-    .column2{
-        width:80%;
-        height:100vh;
-        float:right;
-        background:var(--base-color);
-        overflow:scroll;
+    .icon-menu{
+        color:var(--primary-color) !important;
+    }
+    li{
+        display:inline;
+    }
+    .navbar{
+        width:100%;
+        position:relative;
+    
+      }
+    .nav-menu{
+        position:absolute;
+        width:100%;
+        display:flex;
+        justify-content:space-evenly;
+        align-items:center;
+        z-index:1;
+        
     }
      /*Controls amount of space logo of college can display in for schedule*/
     .compress-image{
@@ -102,20 +95,21 @@ a{
     .compress-name{
         width:40vw;
     }
+
   }
   @media(max-width:700px){
+    .colby-logo{
+        width:35px;
+        height:35px;
+        margin:10px 0 0 0;
+        object-fit:fill;
+    }
     .banner{
         font-size:0.8em;
     }
     .navbar{
-        width:90%;
-        display:flex;
-        justify-content: space-between;
-        height:50px;
-        padding:7.5px 0;
-        margin:0 5%;
-        align-content:center;
-    
+        width:100%;
+        position:relative;
       }
       .bar{
         display:block;
@@ -128,8 +122,9 @@ a{
    
     .hamburger{
         cursor:pointer;
-        display:block;
         z-index:1;
+        position:absolute;
+        left:90%;
     }
     .hamburger.active .bar:nth-child(2){
       opacity:0;
@@ -148,8 +143,9 @@ a{
         /*Hides menu from view*/
         top:var(--navbar-height);
         gap:0;
+        display:flex;
         flex-direction:column;
-        justify-content:flex-start;
+        align-items:center;
         width:40%;
         height:100%;
         left:0;
@@ -157,33 +153,30 @@ a{
         background-color:var(--primary-color);
         z-index:2;
       }
-      .nav-item:first-of-type{
-        margin:10vh 5vh 5vh 5vh;
-      }
       .nav-item{
-        margin:5vh;
+        margin:10px 10px;
       }
   }
 /*End of styling for header*/
 /*styling for photo carousel*/
 .slider{
-    width:90%;
+    width:100%;
     margin: auto; 
     /*Blends in with background so that desktop view doesn't scrunch box shadow*/
-    border:3px solid var(--base-color);
+    /* border:3px solid var(--base-color); */
 
 }
 .wrapper{
     width:100%;
-    box-shadow: 0 0 0 3px var(--primary-color);
+    /* box-shadow: 0 0 0 3px var(--primary-color);
     border-radius:3px;
-    
+     */
 }
 
 
 .slider img{
     width:100%;
-    border-radius:3px;
+    /* border-radius:3px; */
 
 }
 .fade{
@@ -274,7 +267,8 @@ input[type="submit"]{
     color:var(--primary-color);
 }
 ::placeholder{
-    color:var(--text-color)
+    color:var(--text-color);
+    padding:5px;
 }
 /*End of styling for contact us*/
 /*Styling for announcements*/
