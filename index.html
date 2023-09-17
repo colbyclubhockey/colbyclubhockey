@@ -1,282 +1,183 @@
-:root{
-    --navbar-height:0;
-    --tertiary-color:#A4866B;
-    --base-color:white;
-    --primary-color: #DCE4E2;
-    --secondary-color:#002169;
-    --text-color:#365185;
-}
-html{
-    width:100%;
-    height:100%;
-    color:var(--text-color);
-    background:var(--base-color);
-    font-family:"Raleway", sans-serif ;
-}
-*{
-    padding:0;
-    margin:0;
-    /*Makes it so that meausrment such as borders are included in overall width*/
-    box-sizing:border-box;
-  
-  }
-.sub-text{
-    margin: auto 5%;
-}
-.special-banner{
-    color:var(--tertiary-color);
-}
-.banner{
-    text-align:center;
-    background-color:var(--text-color) !important;
-    color:var(--base-color);
-    width:100%;
-    height:40px;
-    /*May need to edit this later*/
-    line-height:40px;
-}
-
-/*Styling for header*/
-li{
-    /*Gets rid of bullet points for unordered list elements*/
-    list-style:none;
-  }
-  
-a{
-    color:var(--secondary-color);
-    text-decoration:none;
-  }
- 
-  .nav-link:hover{
-        text-decoration:underline;
-    }
-
-  
-  @media(min-width:701px){
-    .colby-logo{
-        height:60px;
-        width:60px;
-    }
-    a{
-        color:var(--primary-color) ;
-    }
-    .icon-menu{
-        color:var(--primary-color) !important;
-    }
-    li{
-        display:inline;
-    }
-    .navbar{
-        width:100%;
-        position:relative;
-    
-      }
-    .nav-menu{
-        position:absolute;
-        width:100%;
-        display:flex;
-        justify-content:space-evenly;
-        align-items:center;
-        z-index:1;
-        font-size:1.2em;
-        
-    }
-     /*Controls amount of space logo of college can display in for schedule*/
-    .compress-image{
-        width:5vw;
-    }
-    /*Controls amount of space name of college can display in for schedule*/
-    .compress-name{
-        width:40vw;
-    }
-
-  }
-  @media(max-width:700px){
-    .colby-logo{
-        width:35px;
-        height:35px;
-        margin:10px 0 0 0;
-        object-fit:fill;
-    }
-    .banner{
-        font-size:0.8em;
-    }
-    .navbar{
-        width:100%;
-        position:relative;
-      }
-      .bar{
-        display:block;
-        width:25px;
-        height:3px;
-        background-color:var(--secondary-color);
-        margin: 5px auto;
-        transition: all 0.3s ease-in-out;
-      }
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8"/>
+    <link rel="stylesheet" href="styles.css"/>
    
-    .hamburger{
-        cursor:pointer;
-        z-index:1;
-        position:absolute;
-        left:90%;
-    }
-    .hamburger.active .bar:nth-child(2){
-      opacity:0;
-    }
-    .hamburger.active .bar:nth-child(1){
-      transform:translateY(8px) rotate(45deg);
-    }
-    .hamburger.active .bar:nth-child(3){
-      transform:translateY(-8px) rotate(-45deg);
-    }
-    .nav-menu{
-        position:absolute;
-        left:-100%;
-    }
-    .nav-menu.active{
-        /*Hides menu from view*/
-        top:var(--navbar-height);
-        gap:0;
-        display:flex;
-        flex-direction:column;
-        align-items:center;
-        width:40%;
-        height:100%;
-        left:0;
-        transition:0.3s;
-        background-color:var(--primary-color);
-        z-index:2;
-      }
-      .nav-item{
-        margin:10px 10px;
-      }
-  }
-/*End of styling for header*/
-/*styling for photo carousel*/
-.slider{
-    width:100%;
-    /*Blends in with background so that desktop view doesn't scrunch box shadow*/
-    /* border:3px solid var(--base-color); */
+    <!--import fonts-->
+    <link
+      href="https://fonts.googleapis.com/css?family=Anton%7CBaskervville%7CRaleway&display=swap"
+      rel="stylesheet"
+    />
+    <!--import icons for menu and for bottom of page-->
+    <script src="https://kit.fontawesome.com/24a3f5b67e.js" crossorigin="anonymous"></script>
+    <script src="activate.js" defer></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Colby Club Hockey</title>
+  </head>
+  <body>
+    <section class="banner-slider">
+      <p class="banner">
+        Practice Every Tuesday and Wednesday from 8-10 pm
+      </p>
+      <p class="banner banner2">Feeling generous? Donate to club hockey <a class="special-banner" href="https://colbyathletics.com/sports/2021/11/17/giving-friends-of-recreation.aspx">here</a>
+      </p>
+    </section>
+    <header>
+      <nav class="navbar">
+        <ul class="nav-menu">
+          <li>
+            <img class="colby-logo" src="colbyclubhockeylogo.png">
+          </li>
+          <li class="nav-item">
+            <a href=#About class="nav-link"><i class="icon-menu fa-solid fa-hockey-puck"></i></i>About</a>
+          </li>
+          <li class="nav-item">
+            <a href=#Roster class="nav-link"><i class="icon-menu fa-solid fa-user"></i>Roster</a>
+          </li>
+          <li class="nav-item">
+            <a href=#Schedule class="nav-link" ><i class="icon-menu fa-solid fa-calendar"></i>Schedule</a>
+          </li>
+          <li class="nav-item">
+            <a href=#Contact_Us class="nav-link"><i class="icon-menu fa-solid fa-envelope"></i>Contact Us</a>
+          </li>
+        </ul>
+        <div class="hamburger">
+          <span class="bar"></span>
+          <span class="bar"></span>
+          <span class="bar"></span>
+        </div>
+        <section class="slider">
+          <figure class="wrapper">
+            <img src="colbyclubhockey1.png" class="image fade">
+            <img src="colbyclubhockey2.png" class="image fade"/>
+            <img src="colbyclubhockey3.png" class="image fade"/>
+          </figure>
+      </section>
+      </nav>
+    </header>
+    <main>
+      <section id="About">
+        <header class="section-header">About</header>
+        <p class="sub-text">
+          Founded in 2019, Colby Club Hockey is one of the select club hockey teams associated with a liberal arts college. In 2020, we received membership into the American Collegiate Hockey Association (ACHA), and in 2021, we joined the Northeast Collegiate Hockey Association (NECHA), a division of the ACHA. We practice three times a week on campus at Colby’s Jack Kelly Rink and play a competitive schedule of 12 to 16 games. Our players have various hockey backgrounds ranging from introductory to prep school and junior hockey experience, but we welcome everyone regardless of skill level! Our student leadership team runs all club operations, including game scheduling, budget allocation/distribution, and team events. On the other hand, our coaching staff focuses on player development and team success through practices and games. 
+        </p>
+      </section>
+      <section id="Roster">
+        <header class="section-header">Roster</header>
+        <p class="sub-text">Coming soon!!</p>
+      </section>
+      <section id="Schedule">
+        <header class="section-header">Schedule</header>
+        <table>
+          <tbody>
+            <tr class="row">
+              <td><img class="schedule-logo" src="dartmouthlogo.png"/></td>
+              <td><span class="vs">vs</span> Dartmouth College</td>
+              <td>Oct 15/ 12pm</td>
+            </tr>
+            <tr class="row">
+              <td class="compress-image"><img class="schedule-logo" src="unelogo.png"/></td>
+              <td class="compress-name"><span class="vs">vs</span> University of New England</td>
+              <td>Oct 22/ 2pm</td>
+            </tr>
+            <tr class="row">
+              <td><img class="schedule-logo" src="cmcclogo.png"/></td>
+              <td><span class="at">at</span> Central Maine Community College</td>
+              <td>Oct 27/ 7pm</td>
+            </tr>
+            <tr class="row">
+              <td><img class="schedule-logo" src="WPILogo.png"/></td>
+              <td><span class="vs">vs</span> Worcester Polytechnic Institute</td>
+              <td>Oct 29/ 2pm</td>
+            </tr>
+            <tr class="row">
+              <td><img class="schedule-logo" src="thomascollegelogo.png"/></td>
+              <td><span class="vs">vs</span> Thomas College</td>
+              <td>Nov 2/ 8pm</td>
+            </tr>
+            <tr class="row">
+              <td><img class="schedule-logo" src="SJClogo.png"/></td>
+              <td><span class="at">at</span> St. Joe's College</td>
+              <td>Nov 4/ TBD</td>
+            </tr>
+            <tr class="row">
+              <td><img class="schedule-logo" src="Bateslogo.svg"/></td>
+              <td><span class="vs">vs</span> Bates College</td>
+              <td>Nov 5/ 2pm</td>
+            </tr>
+            <tr class="row">
+              <td><img class="schedule-logo" src="dartmouthlogo.png"/></td>
+              <td><span class="at">at</span> Dartmouth College</td>
+              <td>Nov 11/1:30pm</td>
+            </tr>
+            <tr class="row">
+              <td><img class="schedule-logo" src="UMasslogo.png"/></td>
+              <td><span class="at">at</span> UMass Amherst</td>
+              <td>Nov 12/ TBD</td>
+            </tr>
+            <tr class="row">
+              <td><img class="schedule-logo" src="cmcclogo.png"/></td>
+              <td><span class="vs">vs</span class="vs"> Central Maine Community College</td>
+              <td>Nov 19/ 2pm</td>
+            </tr>
+            <tr class="row">
+              <td><img class="schedule-logo" src="SJClogo.png"/></td>
+              <td><span class="vs">vs</span> St. Joe's College</td>
+              <td>Dec 3/ 2pm</td>
+            </tr>
+            <tr class="row">
+              <td><img class="schedule-logo" src="thomascollegelogo.png"/></td>
+              <td><span class="at">at</span> Thomas College</td>
+              <td>Dec 7/ 8pm</td>
+            </tr>
+            <tr class="row">
+              <td><img class="schedule-logo" src="unelogo.png"/></td>
+              <td><span class="at">at</span> University of New England</td>
+              <td>Jan 27/ 3pm</td>
+            </tr>
+            <tr class="row">
+              <td><img class="schedule-logo" src="thomascollegelogo.png"/></td>
+              <td><span class="vs">vs</span> Thomas College</td>
+              <td>Feb 8/ 8pm</td>
+            </tr>
+            <tr class="row">
+              <td><img class="schedule-logo" src="Bateslogo.svg"/></td>
+              <td><span class="at">at</span> Bates College</td>
+              <td>Feb 9/ 7pm</td>
+            </tr>
+          </tbody>
+        </table>
+      </section>
+      <section id="Contact_Us" >
+        <header class="section-header">Contact Us</header>
+        <div class="contact-us">
+          <form method="post" action="https://formsubmit.co/colbyclubhockey@gmail.com">
+            <input type="text" id="name" name="name" placeholder="Name" required />
+            <input type="email" id="email" name="email"required placeholder="Email" required/>
+            <textarea id="message" name="message" rows="3" columns="30" placeholder="Message" required></textarea>
+            <input type="submit" value="Submit form"/>
+          </form>
+          <!-- <p>
+            Prefer email, send us one <a href="mailto:colbyclubhockey@gmail.com">here</a>.
+          </p> -->
+        </div>
+      </section>
+      <section class="bottom">
+        <div class="social-icons">
+          <a href="https://www.instagram.com/colbyclubhockey/">
+            <i class="fa-brands fa-square-instagram fa-lg first-icon"></i>
+          </a>
+          <a href="https://express.adobe.com/page/t43uyuQWZb4Di/">
+            <i class="fa-solid fa-house fa-lg"></i>
+          </a>
+          <a href="https://www.achahockey.org/stats/roster/513/21?division=3">
+            <i class="fa-brands fa-sticker-mule fa-flip-horizontal fa-lg"></i>
+          </a>
+        </div>
+      </section>
+    </main>
+  </body>
+</html>
 
-}
-.wrapper{
-    width:100%;
-    /* box-shadow: 0 0 0 3px var(--primary-color);
-    border-radius:3px;
-     */
-}
-
-
-.slider img{
-    width:100%;
-    /* border-radius:3px; */
-
-}
-.fade{
-    animation:fade 3s;
-}
-@keyframes fade {
-    from {
-        opacity: 0.4;
-    } 
-    to {
-        opacity: 1;
-    }
-}
-/*end of styling for photo carousel*/
-/*Styling for main elements*/
-.section-header{
-    margin:5vh 5%;
-
-    font-size:1.5em;
-}
-
-/*Schedule styling*/
-.schedule-logo{
-    max-width:8vh;
-    max-height:8vh;
-    object-fit:fill;
-    
-}
-table{
-    width:90%;
-    margin:0 5%;
-    /*Gets rid of all the borders for tr*/
-    border-collapse:collapse;
-}
-/*Have some schedule settings in bigger screen view*/
-.row{
-    height:10vh;
-}
-.row:nth-child(odd){
-    background-color:var(--primary-color);
-   
-}
-/*Rounds corner of logo area for table row*/
-td:nth-child(1){
-    border-top-left-radius:3px;
-    border-bottom-left-radius:3px;
-}
-/*Rounds corner of date (TBD) area for table row*/
-td:nth-child(3){
-    border-top-right-radius:3px;
-    border-bottom-right-radius:3px;
-}
-.vs{
-    background-color:var(--secondary-color);
-    color:var(--primary-color);
-    padding:0 4px;
-    font-size:0.7em;
-}
-.at{
-    font-size:0.7em;
-    background-color:var(--text-color);
-    color:var(--primary-color);
-    padding:0 4px;
-}
-/*End of schedule*/
-/*Contact us section*/
-.contact-us{
-    display:flex;
-    width:90%;
-    margin: 0 5%;
-    align-content:center;
-}
-
-input, textarea{
-    margin:10px 0 0 0;
-    width:90%;
-    min-height:2em;
-    background-color:var(--primary-color);
-    box-shadow: 0 0 0 3px var(--primary-color);
-    border:none;
-    color:var(--text-color);
-    border-radius:3px;
-  
-
-}
-input[type="submit"]{
-    background-color:var(--secondary-color);
-    color:var(--primary-color);
-}
-::placeholder{
-    color:var(--text-color);
-    padding:0 0 0 5px;
-}
-/*End of styling for contact us*/
-/*Styling for announcements*/
-
-/*icon styling*/
-
-i:not(.first-icon){
-    padding:1vw;
-
-}
-i{
-    color:var(--secondary-color);
-}
-i:not(.icon-menu){
-    margin: 5%;
-
-}
 
