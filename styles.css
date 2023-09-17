@@ -48,14 +48,7 @@ a{
   }
  
   .nav-link:hover{
-        /* text-shadow:
-        1px 1px 0 var(--secondary-color);
-         
-        -webkit-transition: all .5s;
-        -moz-transition: all .5s;
-        -o-transition: all .5s;
-        transition: all .5s;*/
-        font-weight:600;
+        text-decoration:underline;
     }
 
   
@@ -85,6 +78,7 @@ a{
         justify-content:space-evenly;
         align-items:center;
         z-index:1;
+        font-size:1.2em;
         
     }
      /*Controls amount of space logo of college can display in for schedule*/
@@ -192,7 +186,7 @@ a{
 /*end of styling for photo carousel*/
 /*Styling for main elements*/
 .section-header{
-    margin:5%;
+    margin:5vh 5%;
 
     font-size:1.5em;
 }
@@ -275,9 +269,11 @@ input[type="submit"]{
 /*icon styling*/
 
 i:not(.first-icon){
-    color:var(--secondary-color);
     padding:1vw;
 
+}
+i{
+    color:var(--secondary-color);
 }
 i:not(.icon-menu){
     margin: 5%;
