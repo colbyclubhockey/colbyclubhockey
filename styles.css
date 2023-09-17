@@ -161,7 +161,6 @@ a{
 /*styling for photo carousel*/
 .slider{
     width:100%;
-    margin: auto; 
     /*Blends in with background so that desktop view doesn't scrunch box shadow*/
     /* border:3px solid var(--base-color); */
 
@@ -193,7 +192,7 @@ a{
 /*end of styling for photo carousel*/
 /*Styling for main elements*/
 .section-header{
-    margin:5% 5%;
+    margin:5vh;
 
     font-size:1.5em;
 }
@@ -246,7 +245,7 @@ td:nth-child(3){
 .contact-us{
     display:flex;
     width:90%;
-    margin: auto 5%;
+    margin: 0 5%;
     align-content:center;
 }
 
@@ -268,22 +267,20 @@ input[type="submit"]{
 }
 ::placeholder{
     color:var(--text-color);
-    padding:5px;
+    padding:0 0 0 5px;
 }
 /*End of styling for contact us*/
 /*Styling for announcements*/
 
 /*icon styling*/
 
-i{
+i:not(.first-icon){
     color:var(--secondary-color);
     padding:1vw;
 
 }
-.first-icon{
-    padding:1vw 1vw 1vw 0 !important;
-}
-.social-icons{
-    margin:5%;
+i:not(.icon-menu){
+    margin: 5vh 5%;
 
 }
+
