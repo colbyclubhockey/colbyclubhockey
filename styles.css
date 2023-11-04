@@ -252,7 +252,8 @@ a {
 table {
     width: 90%;
     margin: 0 5%;
-    /*Gets rid of all the borders for tr*/
+    border-collapse: collapse;
+    /*Gets rid of extra space between td*/
           
 }
 
