@@ -197,6 +197,9 @@ a {
     .nav-item {
         margin: 10px 10px;
     }
+    tr{
+        font-size:0.7em;
+    }
 }
 
 /*End of styling for header*/
