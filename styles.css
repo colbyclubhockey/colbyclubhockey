@@ -52,10 +52,7 @@ a {
     text-decoration: none;
 }
 
-/* .nav-link:hover {
-    text-decoration: underline;
-    text-decoration-thickness:2px
-} */
+
 /* Styles underlining for menu*/
 .nav-link{
     display:inline-block;
@@ -253,12 +250,13 @@ table {
     width: 90%;
     margin: 0 5%;
     /*Gets rid of all the borders for tr*/
-    border-collapse: collapse;
+          
 }
 
 /*Have some schedule settings in bigger screen view*/
 .row {
     height: 10vh;
+
 }
 
 .row:nth-child(odd) {
@@ -273,7 +271,7 @@ td:nth-child(1) {
 }
 
 /*Rounds corner of date (TBD) area for table row*/
-td:nth-child(3) {
+td:nth-child(4) {
     border-top-right-radius: 3px;
     border-bottom-right-radius: 3px;
 }
@@ -331,6 +329,7 @@ input[type="submit"] {
 /*icon styling*/
 
 i:not(.first-icon) {
+    /*No padding on left or else when underlining items, it goes too far out*/
     padding: 6px 6px 6px 0;
 
 }
