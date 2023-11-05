@@ -248,7 +248,34 @@ a {
     object-fit: fill;
 
 }
-
+/*Roster*/
+/* .roster-carousel{
+    position:relative;
+} */
+.roster-table{
+    display:none;
+}
+.roster-table-selected{
+    display:table
+}
+.roster-nav{
+    margin:5vh 5%;
+    text-align:center;
+}
+.roster-button{
+    width:10px;
+    height:10px;
+    display:inline-block;
+    background:var(--primary-color);
+    /*creates the circles*/
+    border-radius:50%;
+    margin:0 5px;
+    cursor:pointer;
+}
+.roster-button-selected{
+    background:var(--tertiary-color);
+}
+/*Table for schedule*/
 table {
     width: 90%;
     margin: 0 5%;
@@ -267,11 +294,17 @@ table {
     background-color: var(--primary-color);
 
 }
-
+td:nth-child(1):not(.schedule){
+    border-top-left-radius: 3px;
+    border-bottom-left-radius: 3px;
+    border-top-right-radius: 3px;
+    border-bottom-right-radius: 3px;
+}
 /*Rounds corner of logo area for table row*/
 td:nth-child(1) {
     border-top-left-radius: 3px;
     border-bottom-left-radius: 3px;
+    padding:10px;
 }
 
 /*Rounds corner of date (TBD) area for table row*/
@@ -279,6 +312,7 @@ td:nth-child(4) {
     border-top-right-radius: 3px;
     border-bottom-right-radius: 3px;
 }
+
 
 .vs {
     background-color: var(--secondary-color);
